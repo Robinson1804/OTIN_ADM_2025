@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Gestión INEI</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header-content">
+            <img src="logo-inei.png" alt="INEI Logo" class="logo">
+            <nav class="nav-menu">
+                <div class="nav-item">
+                    <a href="/" class="nav-link">INICIO</a>
+                </div>
+                <div class="nav-item">
+                    <a href="#" class="nav-link">GERENCIAL</a>
+                    <div class="dropdown-menu">
+                        <a href="/gerencial/poi" class="dropdown-item">POI</a>
+                        <a href="/gerencial/permanencia" class="dropdown-item">Permanencia</a>
+                        <a href="/gerencial/metodologiaabc" class="dropdown-item">Metodología ABC</a>
+                        <a href="/gerencial/acuerdos" class="dropdown-item">Seguimientode Acuerdos</a>
+                        <a href="/gerencial/coordinador" class="dropdown-item">Evaluación de Coordinadores</a>
+                        <a href="/gerencial/scrum" class="dropdown-item">Evaluación de Scrum Masters</a>
+                        <a href="/gerencial/logros" class="dropdown-item">Logros del Mes</a>
+                    </div>
+                </div>
+                <div class="nav-item">
+                    <a href="#" class="nav-link">OPERACIONAL</a>
+                    <div class="dropdown-menu">
+                        <a href="/operacional/pagos" class="dropdown-item">Seguimiento de Pagos</a>
+                        <a href="/operacional/presupuesto" class="dropdown-item">Presupuesto</a>
+                        <a href="/operacional/adquisiciones" class="dropdown-item">Adquisiciones</a>
+                        <a href="/operacional/documentacion" class="dropdown-item">Monitoreo Documentacion</a>
+                        <a href="/operacional/evidencia" class="dropdown-item">Nivel de calidad de la Evidencia</a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main class="home-content">
+        <section class="hero-section">
+            <div class="hero-text">
+                <h1>Sistema de Gestión Gerencial</h1>
+                <p>Plataforma integral para la visualización y análisis de datos estratégicos del INEI. Accede a dashboards especializados para la toma de decisiones.</p>
+                <div class="dashboard-buttons">
+                    <a href="#" class="dashboard-btn btn-gerencial" onclick="navigateTo('/gerencial')">
+                        📊 Dashboard Gerencial
+                    </a>
+                    <a href="#" class="dashboard-btn btn-operacional" onclick="navigateTo('/operacional')">
+                        📈 Dashboard Operacional
+                    </a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="dashboard-q16.jpg" alt="Dashboard Illustration">
+            </div>
+        </section>
+
+        <div class="features">
+            <div class="feature-card">
+                <div class="feature-icon">📊</div>
+                <h3>Visualización en Tiempo Real</h3>
+                <p>Accede a datos actualizados y métricas clave para la toma de decisiones.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">📈</div>
+                <h3>Análisis Gerencial</h3>
+                <p>Herramientas especializadas para el análisis estratégico y seguimiento de KPIs.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🔄</div>
+                <h3>Gestión Operativa</h3>
+                <p>Control y seguimiento de procesos operativos en tiempo real.</p>
+            </div>
+        </div>
+    </main>
+
+    <div id="dashboard-container" class="dashboard-container hide">
+        <iframe id="dashboard-frame" class="dashboard-frame"></iframe>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

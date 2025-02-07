@@ -1,0 +1,91 @@
+]<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Gestión INEI</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header-content">
+            <img src="logo-inei.png" alt="INEI Logo" class="logo" onclick="goToMain()">
+            <nav class="nav-menu">
+                <div class="nav-item">
+                    <a href="javascript:void(0)" onclick="goToMain()" class="nav-link">INICIO</a>
+                </div>
+                <div class="nav-item">
+                    <a href="javascript:void(0)" class="nav-link">GERENCIAL</a>
+                    <div class="dropdown-menu">
+                        <a href="javascript:void(0)" onclick="loadDashboard('gerencial', 'poi')" class="dropdown-item">POI</a>
+                        <a href="javascript:void(0)" onclick="loadDashboard('gerencial', 'permanencia')" class="dropdown-item">Permanencia</a>
+                        <a href="javascript:void(0)" onclick="loadDashboard('gerencial', 'metodologiaabc')" class="dropdown-item">Metodología ABC</a>
+                        <a href="javascript:void(0)" onclick="loadDashboard('gerencial', 'acuerdos')" class="dropdown-item">Seguimiento de Acuerdos</a>
+                        <a href="javascript:void(0)" onclick="loadDashboard('gerencial', 'coordinador')" class="dropdown-item">Evaluación de Coordinadores</a>
+                        <a href="javascript:void(0)" onclick="loadDashboard('gerencial', 'scrum')" class="dropdown-item">Evaluación de Scrum Masters</a>
+                        <a href="javascript:void(0)" onclick="loadDashboard('gerencial', 'logros')" class="dropdown-item">Logros del Mes</a>
+                    </div>
+                </div>
+                <div class="nav-item">
+                    <a href="javascript:void(0)" class="nav-link">OPERACIONAL</a>
+                    <div class="dropdown-menu">
+                        <a href="javascript:void(0)" onclick="loadDashboard('operacional', 'pagos')" class="dropdown-item">Seguimiento de Pagos</a>
+                        <a href="javascript:void(0)" onclick="loadDashboard('operacional', 'presupuesto')" class="dropdown-item">Presupuesto</a>
+                        <a href="javascript:void(0)" onclick="loadDashboard('operacional', 'adquisiciones')" class="dropdown-item">Adquisiciones</a>
+                        <a href="javascript:void(0)" onclick="loadDashboard('operacional', 'documentacion')" class="dropdown-item">Monitoreo Documentación</a>
+                        <a href="javascript:void(0)" onclick="loadDashboard('operacional', 'evidencia')" class="dropdown-item">Nivel de Calidad de la Evidencia</a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main id="mainContent">
+        <!-- Contenido inicial (landing) -->
+        <div id="landingContent" class="home-content">
+            <section class="hero-section">
+                <div class="hero-text">
+                    <h1>Sistema de Gestión Gerencial</h1>
+                    <p>Plataforma integral para la visualización y análisis de datos estratégicos del INEI. Accede a dashboards especializados para la toma de decisiones.</p>
+                    <div class="dashboard-buttons">
+                        <a href="javascript:void(0)" onclick="loadDashboard('gerencial', 'poi')" class="dashboard-btn btn-gerencial">
+                            📊 Dashboard Gerencial
+                        </a>
+                        <a href="javascript:void(0)" onclick="loadDashboard('operacional', 'pagos')" class="dashboard-btn btn-operacional">
+                            📈 Dashboard Operacional
+                        </a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <img src="dashboardicon.png" alt="Dashboard Illustration">
+                </div>
+            </section>
+
+            <div class="features">
+                <div class="feature-card">
+                    <div class="feature-icon">📊</div>
+                    <h3>Visualización en Tiempo Real</h3>
+                    <p>Accede a datos actualizados y métricas clave para la toma de decisiones.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📈</div>
+                    <h3>Análisis Gerencial</h3>
+                    <p>Herramientas especializadas para el análisis estratégico y seguimiento de KPIs.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🔄</div>
+                    <h3>Gestión Operativa</h3>
+                    <p>Control y seguimiento de procesos operativos en tiempo real.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Contenedor para los dashboards -->
+        <div id="dashboardContainer" class="dashboard-container hide">
+            <iframe id="dashboardFrame" class="dashboard-frame"></iframe>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -26,7 +26,7 @@ function goToMain() {
     
     // Actualizar URL y título
     window.history.pushState({}, '', 'index.html');
-    document.title = 'Sistema de Gestión INEI';
+    document.title = 'Sistema de Gestión OTIN';
 }
 
 // Función para cargar un dashboard específico
@@ -49,7 +49,7 @@ function loadDashboard(section, type) {
     // Actualizar URL y título
     const title = getTitleForDashboard(section, type);
     window.history.pushState({}, '', `index.html?section=${section}&dashboard=${type}`);
-    document.title = `${title} - Sistema de Gestión INEI`;
+    document.title = `${title} - Sistema de Gestión OTIN`;
 }
 
 // Función para obtener el título del dashboard

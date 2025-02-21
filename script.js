@@ -1,9 +1,9 @@
 // Configuración de URLs de los dashboards
 const dashboardUrls = {
     gerencial: {
-        poi: 'https://app.powerbi.com/view?r=eyJrIjoiZDQwY2NmY2EtYzUwNi00Nzc2LWIxMWUtYWJiMGJiYjJhNDQyIiwidCI6ImRlZmJhNDcxLWM4M2YtNGExMC04ZTU5LTcxZjFlMDczNWNhOCJ9',
+        poi: 'https://app.powerbi.com/view?r=eyJrIjoiYjQxMWY2MzAtNGJiYy00ODlhLThmYjUtNTM2ZGZiODU3OTVlIiwidCI6IjJkZDI2MmI5LTc4NDctNGM1NC05NTMwLTk0MThlMGY4MWNkYSIsImMiOjR9',
         permanencia: 'https://app.powerbi.com/view?r=eyJrIjoiOTgyM2IwZGUtMTFmZS00NjUzLWEzNmQtY2E1YTQ1MWFjNjk4IiwidCI6ImRlZmJhNDcxLWM4M2YtNGExMC04ZTU5LTcxZjFlMDczNWNhOCJ9',
-        metodologiaabc: 'https://app.powerbi.com/view?r=eyJrIjoiMmNiMjEwMWQtZTZlNS00OWMzLThjY2QtNDA4NjVlODRiMTQ1IiwidCI6ImRlZmJhNDcxLWM4M2YtNGExMC04ZTU5LTcxZjFlMDczNWNhOCJ9',
+        metodologiaabc: 'https://app.powerbi.com/view?r=eyJrIjoiZWY1NmM5MDgtZWE2Ni00MTBkLTlmOGEtODhkZGQ5MWZhYWEwIiwidCI6IjJkZDI2MmI5LTc4NDctNGM1NC05NTMwLTk0MThlMGY4MWNkYSIsImMiOjR9',
         acuerdos: 'https://app.powerbi.com/view?r=eyJrIjoiZjNlNzhmY2UtNWE5ZS00NzM0LWE3OGItODE5MWYyZGY0ZjQ3IiwidCI6ImRlZmJhNDcxLWM4M2YtNGExMC04ZTU5LTcxZjFlMDczNWNhOCJ9',
         coordinador: 'https://app.powerbi.com/view?r=eyJrIjoiNjA4MDMzODUtMjg1My00ZjdlLThhZjAtY2JkNmJiOGQxNjE2IiwidCI6ImRlZmJhNDcxLWM4M2YtNGExMC04ZTU5LTcxZjFlMDczNWNhOCJ9',
         scrum: 'https://app.powerbi.com/view?r=eyJrIjoiOTVhNmUxZTYtMzI2OS00MTdmLTlkZWMtMzM3YmI3NTgwZDYzIiwidCI6ImRlZmJhNDcxLWM4M2YtNGExMC04ZTU5LTcxZjFlMDczNWNhOCJ9',
@@ -25,7 +25,7 @@ function goToMain() {
     document.getElementById('dashboardContainer').classList.add('hide');
     
     // Actualizar URL y título
-    window.history.pushState({}, '', 'index2.html');
+    window.history.pushState({}, '', 'index.html');
     document.title = 'Sistema de Gestión INEI';
 }
 
@@ -59,7 +59,7 @@ function getTitleForDashboard(section, type) {
             poi: 'POI',
             permanencia: 'Permanencia',
             metodologiaabc: 'Metodología ABC',
-            acuerdos: 'Seguimiento de Acuerdos',
+            acuerdos: 'Actas',
             coordinador: 'Evaluación de Coordinadores',
             scrum: 'Evaluación de Scrum Masters',
             logros: 'Logros del Mes'

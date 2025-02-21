@@ -59,7 +59,7 @@ function getTitleForDashboard(section, type) {
             poi: 'POI',
             permanencia: 'Permanencia',
             metodologiaabc: 'Metodología ABC',
-            acuerdos: 'Seguimiento de Acuerdos',
+            acuerdos: 'Actas',
             coordinador: 'Evaluación de Coordinadores',
             scrum: 'Evaluación de Scrum Masters',
             logros: 'Logros del Mes'

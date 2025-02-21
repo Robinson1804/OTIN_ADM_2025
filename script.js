@@ -1,4 +1,4 @@
-// Configuración de URLs de los dashboards
+// Configuración de URLs de los dashboardsa
 const dashboardUrls = {
     gerencial: {
         poi: 'https://app.powerbi.com/view?r=eyJrIjoiYjQxMWY2MzAtNGJiYy00ODlhLThmYjUtNTM2ZGZiODU3OTVlIiwidCI6IjJkZDI2MmI5LTc4NDctNGM1NC05NTMwLTk0MThlMGY4MWNkYSIsImMiOjR9',

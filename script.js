@@ -15,7 +15,11 @@ const dashboardUrls = {
         adquisiciones: 'https://app.powerbi.com/view?r=eyJrIjoiMjJiNjMzMGQtYjQ3Zi00YTQyLThmZTUtNGNmZWEwMjgxY2EwIiwidCI6ImRlZmJhNDcxLWM4M2YtNGExMC04ZTU5LTcxZjFlMDczNWNhOCJ9',
         documentacion: 'https://app.powerbi.com/view?r=eyJrIjoiNTU1YTNhMjQtY2YyNC00ZmMzLThiN2MtODM0ZGYxNmJjYzk1IiwidCI6ImRlZmJhNDcxLWM4M2YtNGExMC04ZTU5LTcxZjFlMDczNWNhOCJ9',
         evidencia: 'https://app.powerbi.com/view?r=eyJrIjoiZWNiOGIwZTktMDBiYi00OTgyLTk0ZjctNWRlYTJhYzQyYzk1IiwidCI6ImRlZmJhNDcxLWM4M2YtNGExMC04ZTU5LTcxZjFlMDczNWNhOCJ9'
+    },
+    otros: {
+        edades: 'https://app.powerbi.com/view?r=eyJrIjoiNGViN2E3YjMtZWFiMS00YmYyLThiZmQtMGVlYjc3NzdiNTkyIiwidCI6IjJkZDI2MmI5LTc4NDctNGM1NC05NTMwLTk0MThlMGY4MWNkYSIsImMiOjR9',
     }
+        
 };
 
 // Función para ir a la página principal

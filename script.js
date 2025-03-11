@@ -74,6 +74,10 @@ function getTitleForDashboard(section, type) {
             adquisiciones: 'Adquisiciones',
             documentacion: 'Monitoreo Documentación',
             evidencia: 'Nivel de Calidad de la Evidencia'
+        },
+        otros: {
+            edades: 'Edades',
+           
         }
     };
     return titles[section]?.[type] || 'Dashboard';

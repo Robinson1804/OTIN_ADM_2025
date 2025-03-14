@@ -2,7 +2,7 @@
 const dashboardUrls = {
     gerencial: {
         poi: 'https://app.powerbi.com/view?r=eyJrIjoiYjQxMWY2MzAtNGJiYy00ODlhLThmYjUtNTM2ZGZiODU3OTVlIiwidCI6IjJkZDI2MmI5LTc4NDctNGM1NC05NTMwLTk0MThlMGY4MWNkYSIsImMiOjR9',// Actualizado
-        permanencia: 'https://app.powerbi.com/view?r=eyJrIjoiOWExZDUzNTctOGVmYi00ZjhjLWFlYTEtZGE2OGFlZGU1NTBkIiwidCI6IjJkZDI2MmI5LTc4NDctNGM1NC05NTMwLTk0MThlMGY4MWNkYSIsImMiOjR9', // Actualizado
+        asistencia: 'https://app.powerbi.com/view?r=eyJrIjoiNzdiYmExZTUtMWEyMi00NDYzLWE0MjgtNWQ3YmM3NzA4YzFkIiwidCI6IjJkZDI2MmI5LTc4NDctNGM1NC05NTMwLTk0MThlMGY4MWNkYSIsImMiOjR9', // Actualizado
         metodologiaabc: 'https://app.powerbi.com/view?r=eyJrIjoiZWY1NmM5MDgtZWE2Ni00MTBkLTlmOGEtODhkZGQ5MWZhYWEwIiwidCI6IjJkZDI2MmI5LTc4NDctNGM1NC05NTMwLTk0MThlMGY4MWNkYSIsImMiOjR9', // Actualizado
         acuerdos: 'https://app.powerbi.com/view?r=eyJrIjoiZTNlNTZmMzMtZmI2Yi00OWI3LTkzNzctYzliOGNjMTA5YjgzIiwidCI6IjJkZDI2MmI5LTc4NDctNGM1NC05NTMwLTk0MThlMGY4MWNkYSIsImMiOjR9', // Actualizado
         coordinador: 'https://app.powerbi.com/view?r=eyJrIjoiZTQ2NjJhMDgtNGQzNy00MzdkLWExYzItODI0MTQ0YjQ2ZmMzIiwidCI6IjJkZDI2MmI5LTc4NDctNGM1NC05NTMwLTk0MThlMGY4MWNkYSIsImMiOjR9',// Actualizado
@@ -14,7 +14,8 @@ const dashboardUrls = {
         presupuesto: 'https://app.powerbi.com/view?r=eyJrIjoiZDRmNjNhODctYTljNS00OWYwLThhYTMtY2E1ZDUzZTYwZTBlIiwidCI6ImRlZmJhNDcxLWM4M2YtNGExMC04ZTU5LTcxZjFlMDczNWNhOCJ9',
         adquisiciones: 'https://app.powerbi.com/view?r=eyJrIjoiMjJiNjMzMGQtYjQ3Zi00YTQyLThmZTUtNGNmZWEwMjgxY2EwIiwidCI6ImRlZmJhNDcxLWM4M2YtNGExMC04ZTU5LTcxZjFlMDczNWNhOCJ9',
         documentacion: 'https://app.powerbi.com/view?r=eyJrIjoiNTU1YTNhMjQtY2YyNC00ZmMzLThiN2MtODM0ZGYxNmJjYzk1IiwidCI6ImRlZmJhNDcxLWM4M2YtNGExMC04ZTU5LTcxZjFlMDczNWNhOCJ9',
-        evidencia: 'https://app.powerbi.com/view?r=eyJrIjoiZWNiOGIwZTktMDBiYi00OTgyLTk0ZjctNWRlYTJhYzQyYzk1IiwidCI6ImRlZmJhNDcxLWM4M2YtNGExMC04ZTU5LTcxZjFlMDczNWNhOCJ9'
+        evidencia: 'https://app.powerbi.com/view?r=eyJrIjoiZWNiOGIwZTktMDBiYi00OTgyLTk0ZjctNWRlYTJhYzQyYzk1IiwidCI6ImRlZmJhNDcxLWM4M2YtNGExMC04ZTU5LTcxZjFlMDczNWNhOCJ9',
+        permanencia: 'https://app.powerbi.com/view?r=eyJrIjoiOWExZDUzNTctOGVmYi00ZjhjLWFlYTEtZGE2OGFlZGU1NTBkIiwidCI6IjJkZDI2MmI5LTc4NDctNGM1NC05NTMwLTk0MThlMGY4MWNkYSIsImMiOjR9' // Actualizado
     },
     otros: {
         edades: 'https://app.powerbi.com/view?r=eyJrIjoiNGViN2E3YjMtZWFiMS00YmYyLThiZmQtMGVlYjc3NzdiNTkyIiwidCI6IjJkZDI2MmI5LTc4NDctNGM1NC05NTMwLTk0MThlMGY4MWNkYSIsImMiOjR9',
@@ -61,7 +62,7 @@ function getTitleForDashboard(section, type) {
     const titles = {
         gerencial: {
             poi: 'POI',
-            permanencia: 'Permanencia',
+            asistencia: 'Asistencia',
             metodologiaabc: 'Metodología ABC',
             acuerdos: 'Actas',
             coordinador: 'Evaluación de Coordinadores',
@@ -73,6 +74,7 @@ function getTitleForDashboard(section, type) {
             presupuesto: 'Presupuesto',
             adquisiciones: 'Adquisiciones',
             documentacion: 'Monitoreo Documentación',
+            permanencia: 'Permanencia',
             evidencia: 'Nivel de Calidad de la Evidencia'
         },
         otros: {

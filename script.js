@@ -74,8 +74,8 @@ function getTitleForDashboard(section, type) {
             presupuesto: 'Presupuesto',
             adquisiciones: 'Adquisiciones',
             documentacion: 'Monitoreo Documentación',
-            permanencia: 'Permanencia',
-            evidencia: 'Nivel de Calidad de la Evidencia'
+            evidencia: 'Nivel de Calidad de la Evidencia',
+            permanencia: 'Permanencia'
         },
         otros: {
             edades: 'Edades',

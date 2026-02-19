@@ -1,0 +1,791 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Repositorio OTIN - Notas Informativas INEI</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+
+        /* HEADER Y NAVEGACIÓN */
+        .header {
+            background: white;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-content {
+            max-width: 1600px;
+            margin: 0 auto;
+            padding: 20px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo-section {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .logo-box {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, #0066cc, #004999);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+            box-shadow: 0 4px 15px rgba(0,102,204,0.3);
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+
+        .logo-box:hover {
+            transform: scale(1.05);
+        }
+
+        .logo-text h1 {
+            font-size: 22px;
+            color: #333;
+            margin-bottom: 3px;
+        }
+
+        .logo-text p {
+            font-size: 13px;
+            color: #666;
+        }
+
+        .nav-menu {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+        }
+
+        .nav-item {
+            position: relative;
+        }
+
+        .nav-link {
+            text-decoration: none;
+            color: #666;
+            font-size: 14px;
+            font-weight: 600;
+            padding: 12px 20px;
+            border-radius: 8px;
+            transition: all 0.3s;
+            display: block;
+        }
+
+        .nav-link:hover {
+            background: #0066cc;
+            color: white;
+        }
+
+        .dropdown-menu {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: white;
+            min-width: 220px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+            border-radius: 8px;
+            overflow: hidden;
+            margin-top: 5px;
+        }
+
+        .nav-item:hover .dropdown-menu {
+            display: block;
+        }
+
+        .dropdown-item {
+            display: block;
+            padding: 12px 20px;
+            color: #666;
+            text-decoration: none;
+            font-size: 13px;
+            transition: all 0.2s;
+        }
+
+        .dropdown-item:hover {
+            background: #f5f5f5;
+            color: #0066cc;
+            padding-left: 25px;
+        }
+
+        /* CONTENEDOR PRINCIPAL */
+        .container {
+            max-width: 1600px;
+            margin: 0 auto;
+            padding: 30px 20px;
+        }
+
+        /* SECCIÓN DE FILTROS */
+        .filters-section {
+            background: white;
+            padding: 25px 40px;
+            border-radius: 15px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            margin-bottom: 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .filter-buttons {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .filter-btn {
+            padding: 10px 25px;
+            border: 2px solid #e0e0e0;
+            background: white;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 13px;
+            font-weight: 600;
+            transition: all 0.3s;
+            color: #666;
+        }
+
+        .filter-btn:hover {
+            border-color: #0066cc;
+            color: #0066cc;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,102,204,0.2);
+        }
+
+        .filter-btn.active {
+            background: #0066cc;
+            color: white;
+            border-color: #0066cc;
+        }
+
+        .search-box {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            background: #f5f5f5;
+            padding: 12px 20px;
+            border-radius: 25px;
+            border: 2px solid transparent;
+            transition: all 0.3s;
+        }
+
+        .search-box:focus-within {
+            border-color: #0066cc;
+            background: white;
+        }
+
+        .search-box input {
+            border: none;
+            background: transparent;
+            outline: none;
+            font-size: 14px;
+            width: 280px;
+            color: #333;
+        }
+
+        .search-box input::placeholder {
+            color: #999;
+        }
+
+        /* GRID DE DOCUMENTOS */
+        .documents-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 25px;
+            margin-bottom: 30px;
+        }
+
+        .doc-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            transition: all 0.3s;
+            cursor: pointer;
+            position: relative;
+        }
+
+        .doc-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 35px rgba(0,0,0,0.2);
+        }
+
+        /* PREVIEW DEL DOCUMENTO */
+        .doc-preview {
+            height: 200px;
+            background: #f8f9fa;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+            border-bottom: 3px solid #0066cc;
+        }
+
+        .doc-preview iframe {
+            width: 100%;
+            height: 300px;
+            transform: scale(0.67);
+            transform-origin: top left;
+            pointer-events: none;
+            border: none;
+        }
+
+        .doc-preview-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, rgba(102, 126, 234, 0.85), rgba(118, 75, 162, 0.85));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .doc-card:hover .doc-preview-overlay {
+            opacity: 1;
+        }
+
+        .preview-icon {
+            font-size: 64px;
+            color: white;
+            filter: drop-shadow(0 4px 8px rgba(0,0,0,0.3));
+        }
+
+        .doc-badge {
+            position: absolute;
+            top: 12px;
+            right: 12px;
+            background: white;
+            padding: 6px 15px;
+            border-radius: 20px;
+            font-size: 11px;
+            font-weight: bold;
+            color: #0066cc;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+            z-index: 10;
+        }
+
+        /* CUERPO DE LA TARJETA */
+        .doc-body {
+            padding: 20px;
+        }
+
+        .doc-title {
+            font-size: 16px;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 12px;
+            line-height: 1.5;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            min-height: 48px;
+        }
+
+        .doc-description {
+            font-size: 13px;
+            color: #666;
+            margin-bottom: 15px;
+            line-height: 1.4;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        .doc-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 15px;
+            border-top: 1px solid #e0e0e0;
+        }
+
+        .doc-date {
+            font-size: 12px;
+            color: #999;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .doc-category {
+            font-size: 11px;
+            background: linear-gradient(135deg, #0066cc, #004999);
+            padding: 5px 14px;
+            border-radius: 12px;
+            color: white;
+            font-weight: 600;
+        }
+
+        /* MODAL */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.92);
+            animation: fadeIn 0.3s;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .modal-content {
+            position: relative;
+            background-color: white;
+            margin: 2% auto;
+            width: 90%;
+            max-width: 1400px;
+            height: 90%;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 50px rgba(0,0,0,0.5);
+            animation: slideIn 0.3s;
+        }
+
+        @keyframes slideIn {
+            from { transform: translateY(-50px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        .modal-header {
+            background: linear-gradient(135deg, #0066cc, #004999);
+            color: white;
+            padding: 20px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .modal-header h2 {
+            font-size: 20px;
+            font-weight: 600;
+        }
+
+        .modal-actions {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+        }
+
+        .action-btn {
+            background: rgba(255,255,255,0.2);
+            border: none;
+            color: white;
+            font-size: 18px;
+            cursor: pointer;
+            width: 40px;
+            height: 40px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s;
+        }
+
+        .action-btn:hover {
+            background: rgba(255,255,255,0.3);
+            transform: scale(1.1);
+        }
+
+        .close-btn {
+            font-size: 28px;
+        }
+
+        .iframe-container {
+            width: 100%;
+            height: calc(100% - 80px);
+            background: #f5f5f5;
+        }
+
+        .iframe-container iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        /* MENSAJE DE VACÍO */
+        .empty-state {
+            text-align: center;
+            padding: 80px 20px;
+            color: white;
+        }
+
+        .empty-state-icon {
+            font-size: 80px;
+            margin-bottom: 20px;
+            opacity: 0.5;
+        }
+
+        .empty-state h3 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .empty-state p {
+            font-size: 16px;
+            opacity: 0.8;
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .nav-menu {
+                flex-direction: column;
+                width: 100%;
+            }
+
+            .nav-item {
+                width: 100%;
+            }
+
+            .nav-link {
+                text-align: center;
+            }
+
+            .filters-section {
+                padding: 20px;
+            }
+
+            .search-box input {
+                width: 180px;
+            }
+
+            .documents-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .modal-content {
+                width: 95%;
+                height: 95%;
+                margin: 2.5% auto;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- HEADER CON NAVEGACIÓN -->
+    <header class="header">
+        <div class="header-content">
+            <div class="logo-section">
+                <div class="logo-box" onclick="location.reload()">INEI</div>
+                <div class="logo-text">
+                    <h1>Repositorio OTIN</h1>
+                    <p>Sistema de Gestión de Notas Informativas</p>
+                </div>
+            </div>
+            <nav class="nav-menu">
+                <div class="nav-item">
+                    <a href="javascript:void(0)" class="nav-link">INICIO</a>
+                </div>
+                <div class="nav-item">
+                    <a href="javascript:void(0)" class="nav-link">GERENCIAL</a>
+                    <div class="dropdown-menu">
+                        <a href="javascript:void(0)" class="dropdown-item">POI</a>
+                        <a href="javascript:void(0)" class="dropdown-item">Asistencia Reuniones</a>
+                        <a href="javascript:void(0)" class="dropdown-item">Metodología ABC</a>
+                        <a href="javascript:void(0)" class="dropdown-item">Actas</a>
+                        <a href="javascript:void(0)" class="dropdown-item">Evaluación de Coordinadores</a>
+                        <a href="javascript:void(0)" class="dropdown-item">Evaluación de Scrum Masters</a>
+                        <a href="javascript:void(0)" class="dropdown-item">Logros del Mes</a>
+                    </div>
+                </div>
+                <div class="nav-item">
+                    <a href="javascript:void(0)" class="nav-link">OPERACIONAL</a>
+                    <div class="dropdown-menu">
+                        <a href="javascript:void(0)" class="dropdown-item">Seguimiento de Pagos</a>
+                        <a href="javascript:void(0)" class="dropdown-item">Presupuesto</a>
+                        <a href="javascript:void(0)" class="dropdown-item">Adquisiciones</a>
+                        <a href="javascript:void(0)" class="dropdown-item">Monitoreo Documentación</a>
+                        <a href="javascript:void(0)" class="dropdown-item">Nivel de Calidad</a>
+                        <a href="javascript:void(0)" class="dropdown-item">Permanencia</a>
+                    </div>
+                </div>
+                <div class="nav-item">
+                    <a href="javascript:void(0)" class="nav-link">OTROS</a>
+                    <div class="dropdown-menu">
+                        <a href="javascript:void(0)" class="dropdown-item">EDADES</a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- CONTENEDOR PRINCIPAL -->
+    <div class="container">
+        <!-- SECCIÓN DE FILTROS Y BÚSQUEDA -->
+        <div class="filters-section">
+            <div class="filter-buttons">
+                <button class="filter-btn active" onclick="filterDocs('TODOS')">TODOS</button>
+                <button class="filter-btn" onclick="filterDocs('GERENCIAL')">GERENCIAL</button>
+                <button class="filter-btn" onclick="filterDocs('OPERACIONAL')">OPERACIONAL</button>
+                <button class="filter-btn" onclick="filterDocs('CENSO')">CENSO</button>
+                <button class="filter-btn" onclick="filterDocs('OTROS')">OTROS</button>
+            </div>
+            <div class="search-box">
+                <span>🔍</span>
+                <input type="text" id="searchInput" placeholder="Buscar por título o categoría..." onkeyup="searchDocs()">
+            </div>
+        </div>
+
+        <!-- GRID DE DOCUMENTOS -->
+        <div class="documents-grid" id="docsGrid"></div>
+    </div>
+
+    <!-- MODAL PARA VISUALIZAR DOCUMENTO -->
+    <div id="pdfModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="modalTitle">Documento</h2>
+                <div class="modal-actions">
+                    <button class="action-btn" onclick="openInNewTab()" title="Abrir en nueva pestaña">🔗</button>
+                    <button class="action-btn close-btn" onclick="closeModal()">&times;</button>
+                </div>
+            </div>
+            <div class="iframe-container">
+                <iframe id="pdfIframe" src=""></iframe>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Base de datos de documentos
+        const documents = [
+            {
+                id: 1,
+                title: "Resultados de las Pruebas Internas del Sistema de Censo en Línea",
+                category: "CENSO",
+                date: "2025-01-15",
+                pdfUrl: "https://docs.google.com/document/d/18vY3cy7GzdVSdOv1CFnYD2FDscqqZXGh/preview",
+                description: "Análisis completo de las pruebas realizadas al sistema de censo digital"
+            },
+            {
+                id: 2,
+                title: "Informe de Gestión Trimestral Q1 2025",
+                category: "GERENCIAL",
+                date: "2025-03-28",
+                pdfUrl: "https://docs.google.com/document/d/18vY3cy7GzdVSdOv1CFnYD2FDscqqZXGh/preview",
+                description: "Resultados y métricas del primer trimestre del año"
+            },
+            {
+                id: 3,
+                title: "Protocolo de Operaciones de Campo",
+                category: "OPERACIONAL",
+                date: "2025-02-10",
+                pdfUrl: "https://docs.google.com/document/d/18vY3cy7GzdVSdOv1CFnYD2FDscqqZXGh/preview",
+                description: "Guía completa de procedimientos operativos en campo"
+            },
+            {
+                id: 4,
+                title: "Análisis Demográfico Nacional 2025",
+                category: "CENSO",
+                date: "2025-04-05",
+                pdfUrl: "https://docs.google.com/document/d/18vY3cy7GzdVSdOv1CFnYD2FDscqqZXGh/preview",
+                description: "Estadísticas poblacionales y tendencias demográficas actualizadas"
+            },
+            {
+                id: 5,
+                title: "Presupuesto Anual 2025",
+                category: "GERENCIAL",
+                date: "2025-01-05",
+                pdfUrl: "https://docs.google.com/document/d/18vY3cy7GzdVSdOv1CFnYD2FDscqqZXGh/preview",
+                description: "Distribución presupuestaria y proyección financiera del año"
+            },
+            {
+                id: 6,
+                title: "Manual de Capacitación para Encuestadores",
+                category: "OPERACIONAL",
+                date: "2025-03-15",
+                pdfUrl: "https://docs.google.com/document/d/18vY3cy7GzdVSdOv1CFnYD2FDscqqZXGh/preview",
+                description: "Material de formación y guías de capacitación"
+            },
+            {
+                id: 7,
+                title: "Informe de Auditoría Interna",
+                category: "GERENCIAL",
+                date: "2025-02-28",
+                pdfUrl: "https://docs.google.com/document/d/18vY3cy7GzdVSdOv1CFnYD2FDscqqZXGh/preview",
+                description: "Revisión exhaustiva de procesos internos y cumplimiento"
+            },
+            {
+                id: 8,
+                title: "Calendario de Actividades 2025",
+                category: "OTROS",
+                date: "2025-01-10",
+                pdfUrl: "https://docs.google.com/document/d/18vY3cy7GzdVSdOv1CFnYD2FDscqqZXGh/preview",
+                description: "Planificación anual de eventos y actividades institucionales"
+            }
+        ];
+
+        let currentFilter = 'TODOS';
+        let currentDocUrl = '';
+
+        // Renderizar documentos en el grid
+        function renderDocuments(docs) {
+            const grid = document.getElementById('docsGrid');
+            
+            if (docs.length === 0) {
+                grid.innerHTML = `
+                    <div class="empty-state" style="grid-column: 1 / -1;">
+                        <div class="empty-state-icon">📭</div>
+                        <h3>No se encontraron documentos</h3>
+                        <p>Intenta con otros términos de búsqueda o filtros</p>
+                    </div>
+                `;
+                return;
+            }
+
+            grid.innerHTML = '';
+
+            docs.forEach(doc => {
+                const card = document.createElement('div');
+                card.className = 'doc-card';
+                card.onclick = () => openPDF(doc);
+
+                const dateObj = new Date(doc.date);
+                const formattedDate = dateObj.toLocaleDateString('es-ES', { 
+                    year: 'numeric', 
+                    month: 'long', 
+                    day: 'numeric' 
+                });
+
+                card.innerHTML = `
+                    <div class="doc-preview">
+                        <iframe src="${doc.pdfUrl}" loading="lazy"></iframe>
+                        <div class="doc-preview-overlay">
+                            <div class="preview-icon">👁️</div>
+                        </div>
+                        <div class="doc-badge">N°${doc.id.toString().padStart(3, '0')}</div>
+                    </div>
+                    <div class="doc-body">
+                        <div class="doc-title">${doc.title}</div>
+                        <div class="doc-description">${doc.description}</div>
+                        <div class="doc-meta">
+                            <div class="doc-date">📅 ${formattedDate}</div>
+                            <div class="doc-category">${doc.category}</div>
+                        </div>
+                    </div>
+                `;
+
+                grid.appendChild(card);
+            });
+        }
+
+        // Filtrar documentos por categoría
+        function filterDocs(category) {
+            currentFilter = category;
+            
+            const buttons = document.querySelectorAll('.filter-btn');
+            buttons.forEach(btn => btn.classList.remove('active'));
+            event.target.classList.add('active');
+
+            const filtered = category === 'TODOS' 
+                ? documents 
+                : documents.filter(doc => doc.category === category);
+
+            renderDocuments(filtered);
+        }
+
+        // Buscar documentos
+        function searchDocs() {
+            const searchTerm = document.getElementById('searchInput').value.toLowerCase();
+            
+            let filtered = currentFilter === 'TODOS' 
+                ? documents 
+                : documents.filter(doc => doc.category === currentFilter);
+
+            if (searchTerm) {
+                filtered = filtered.filter(doc =>
+                    doc.title.toLowerCase().includes(searchTerm) ||
+                    doc.category.toLowerCase().includes(searchTerm) ||
+                    doc.description.toLowerCase().includes(searchTerm)
+                );
+            }
+
+            renderDocuments(filtered);
+        }
+
+        // Abrir documento en modal
+        function openPDF(doc) {
+            document.getElementById('modalTitle').textContent = doc.title;
+            document.getElementById('pdfIframe').src = doc.pdfUrl;
+            document.getElementById('pdfModal').style.display = 'block';
+            currentDocUrl = doc.pdfUrl;
+            document.body.style.overflow = 'hidden';
+        }
+
+        // Cerrar modal
+        function closeModal() {
+            document.getElementById('pdfModal').style.display = 'none';
+            document.getElementById('pdfIframe').src = '';
+            currentDocUrl = '';
+            document.body.style.overflow = 'auto';
+        }
+
+        // Abrir en nueva pestaña
+        function openInNewTab() {
+            if (currentDocUrl) {
+                const url = currentDocUrl.replace('/preview', '/edit');
+                window.open(url, '_blank');
+            }
+        }
+
+        // Cerrar modal al hacer clic fuera
+        window.onclick = function(event) {
+            const modal = document.getElementById('pdfModal');
+            if (event.target === modal) {
+                closeModal();
+            }
+        }
+
+        // Cerrar modal con tecla Escape
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'Escape') {
+                closeModal();
+            }
+        });
+
+        // Inicializar
+        renderDocuments(documents);
+    </script>
+</body>
+</html>

@@ -5,7 +5,7 @@ const dashboardUrls = {
         asistencia: 'https://app.powerbi.com/view?r=eyJrIjoiNzdiYmExZTUtMWEyMi00NDYzLWE0MjgtNWQ3YmM3NzA4YzFkIiwidCI6IjJkZDI2MmI5LTc4NDctNGM1NC05NTMwLTk0MThlMGY4MWNkYSIsImMiOjR9', // Actualizado
         metodologiaabc: 'https://app.powerbi.com/view?r=eyJrIjoiZWY1NmM5MDgtZWE2Ni00MTBkLTlmOGEtODhkZGQ5MWZhYWEwIiwidCI6IjJkZDI2MmI5LTc4NDctNGM1NC05NTMwLTk0MThlMGY4MWNkYSIsImMiOjR9', // Actualizado
         acuerdos: 'https://app.powerbi.com/view?r=eyJrIjoiZTNlNTZmMzMtZmI2Yi00OWI3LTkzNzctYzliOGNjMTA5YjgzIiwidCI6IjJkZDI2MmI5LTc4NDctNGM1NC05NTMwLTk0MThlMGY4MWNkYSIsImMiOjR9', // Actualizado
-        coordinador: 'https://app.powerbi.com/view?r=eyJrIjoiMWFjYjQxYWMtOWFiZC00Zjg3LTg5ZjMtMjU0ODFiZmM5OWJlIiwidCI6ImM0MWJjOWY2LTVlNDAtNDA5Yy1iOWNjLWRiNjhmYjVhMzU1NCIsImMiOjR9',// Actualizado
+        coordinador: 'https://app.powerbi.com/view?r=eyJrIjoiMWFjYjQxYWMtOWFiZC00Zjg3LTg5ZjMtMjU0ODFiZmM5OWJlIiwidCI6ImM0MWJjOWY2LTVlNDAtNDA5Yy1iOWNjLWRiNjhmYjVhMzU1NCIsImMiOjR9',// Actualizadoo2026
         scrum: 'https://app.powerbi.com/view?r=eyJrIjoiZDc1NDY3YTktNzVjNy00YjBlLTkzMDgtYThjMWM4NmZkNjJkIiwidCI6IjJkZDI2MmI5LTc4NDctNGM1NC05NTMwLTk0MThlMGY4MWNkYSIsImMiOjR9',// Actualizado
         logros: 'https://app.powerbi.com/view?r=eyJrIjoiNjcwNWZjMDctNTZhMC00YzJjLWE3ODktMTdlY2U1M2NlYzQyIiwidCI6IjJkZDI2MmI5LTc4NDctNGM1NC05NTMwLTk0MThlMGY4MWNkYSIsImMiOjR9'// Actualizado
     },

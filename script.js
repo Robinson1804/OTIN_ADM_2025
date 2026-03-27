@@ -13,7 +13,7 @@ const dashboardUrls = {
         pagos: 'https://app.powerbi.com/view?r=eyJrIjoiNjE3MTIzN2UtZTUwYy00ZjUyLTg5NjQtMmRkZjA4ZmQ4NDY0IiwidCI6ImRlZmJhNDcxLWM4M2YtNGExMC04ZTU5LTcxZjFlMDczNWNhOCJ9',
         presupuesto: 'https://app.powerbi.com/view?r=eyJrIjoiZDRmNjNhODctYTljNS00OWYwLThhYTMtY2E1ZDUzZTYwZTBlIiwidCI6ImRlZmJhNDcxLWM4M2YtNGExMC04ZTU5LTcxZjFlMDczNWNhOCJ9',
         adquisiciones: 'https://app.powerbi.com/view?r=eyJrIjoiMjJiNjMzMGQtYjQ3Zi00YTQyLThmZTUtNGNmZWEwMjgxY2EwIiwidCI6ImRlZmJhNDcxLWM4M2YtNGExMC04ZTU5LTcxZjFlMDczNWNhOCJ9',
-        documentacion: 'https://app.powerbi.com/view?r=eyJrIjoiNTU1YTNhMjQtY2YyNC00ZmMzLThiN2MtODM0ZGYxNmJjYzk1IiwidCI6ImRlZmJhNDcxLWM4M2YtNGExMC04ZTU5LTcxZjFlMDczNWNhOCJ9',
+        documentacion: 'https://app.powerbi.com/view?r=eyJrIjoiNDY0ODc1ODAtM2QxYy00ODg1LWI2M2ItZTdiNDg4OTIyYmQzIiwidCI6IjJkZDI2MmI5LTc4NDctNGM1NC05NTMwLTk0MThlMGY4MWNkYSIsImMiOjR9', // Actualizado
         evidencia: 'https://app.powerbi.com/view?r=eyJrIjoiZWNiOGIwZTktMDBiYi00OTgyLTk0ZjctNWRlYTJhYzQyYzk1IiwidCI6ImRlZmJhNDcxLWM4M2YtNGExMC04ZTU5LTcxZjFlMDczNWNhOCJ9',
         permanencia: 'https://app.powerbi.com/view?r=eyJrIjoiOWExZDUzNTctOGVmYi00ZjhjLWFlYTEtZGE2OGFlZGU1NTBkIiwidCI6IjJkZDI2MmI5LTc4NDctNGM1NC05NTMwLTk0MThlMGY4MWNkYSIsImMiOjR9' // Actualizado
     },
@@ -74,8 +74,8 @@ function getTitleForDashboard(section, type) {
             presupuesto: 'Presupuesto',
             adquisiciones: 'Adquisiciones',
             documentacion: 'Monitoreo Documentación',
-            permanencia: 'Permanencia',
-            evidencia: 'Nivel de Calidad de la Evidencia'
+            evidencia: 'Nivel de Calidad de la Evidencia',
+            permanencia: 'Permanencia'
         },
         otros: {
             edades: 'Edades',

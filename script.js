@@ -3,10 +3,10 @@ const dashboardUrls = {
     gerencial: {
         poi: 'https://app.powerbi.com/view?r=eyJrIjoiZGUyZjU2YzgtYjM1NS00YTgyLTk3ZGEtN2M5ZTM5MGY2NTg0IiwidCI6ImM0MWJjOWY2LTVlNDAtNDA5Yy1iOWNjLWRiNjhmYjVhMzU1NCIsImMiOjR9',// Actualizado 2026
         asistencia: 'https://app.powerbi.com/view?r=eyJrIjoiZDNmZTEwNzktY2NmNC00NDkyLTgyZWItYjQyOWVkYmQ2YWY0IiwidCI6ImM0MWJjOWY2LTVlNDAtNDA5Yy1iOWNjLWRiNjhmYjVhMzU1NCIsImMiOjR9', // Actualizado
-        metodologiaabc: 'https://app.powerbi.com/view?r=eyJrIjoiZWY1NmM5MDgtZWE2Ni00MTBkLTlmOGEtODhkZGQ5MWZhYWEwIiwidCI6IjJkZDI2MmI5LTc4NDctNGM1NC05NTMwLTk0MThlMGY4MWNkYSIsImMiOjR9', // Actualizado
+        metodologiaabc: 'https://app.powerbi.com/view?r=eyJrIjoiZTg3ZTg3YzYtMGJlZC00NTViLThmMzEtZWFmNjhlMWM4ZTY5IiwidCI6ImM0MWJjOWY2LTVlNDAtNDA5Yy1iOWNjLWRiNjhmYjVhMzU1NCIsImMiOjR9', // Actualizado
         acuerdos: 'https://app.powerbi.com/view?r=eyJrIjoiZmNhNTNkZjctZThjZC00MWQzLTljMWUtNGY5YWI4Y2YzYmQ0IiwidCI6ImM0MWJjOWY2LTVlNDAtNDA5Yy1iOWNjLWRiNjhmYjVhMzU1NCIsImMiOjR9', // Actualizado
         coordinador: 'https://app.powerbi.com/view?r=eyJrIjoiMWFjYjQxYWMtOWFiZC00Zjg3LTg5ZjMtMjU0ODFiZmM5OWJlIiwidCI6ImM0MWJjOWY2LTVlNDAtNDA5Yy1iOWNjLWRiNjhmYjVhMzU1NCIsImMiOjR9',// Actualizadoo2026
-        scrum: 'https://app.powerbi.com/view?r=eyJrIjoiZDc1NDY3YTktNzVjNy00YjBlLTkzMDgtYThjMWM4NmZkNjJkIiwidCI6IjJkZDI2MmI5LTc4NDctNGM1NC05NTMwLTk0MThlMGY4MWNkYSIsImMiOjR9',// Actualizado
+        scrum: 'https://app.powerbi.com/view?r=eyJrIjoiZmI3NGJmYjQtZDc1NC00ZWEwLWEyODctOTI3ZjgwYmM4MWQzIiwidCI6ImM0MWJjOWY2LTVlNDAtNDA5Yy1iOWNjLWRiNjhmYjVhMzU1NCIsImMiOjR9',// Actualizado
         logros: 'https://app.powerbi.com/view?r=eyJrIjoiNjcwNWZjMDctNTZhMC00YzJjLWE3ODktMTdlY2U1M2NlYzQyIiwidCI6IjJkZDI2MmI5LTc4NDctNGM1NC05NTMwLTk0MThlMGY4MWNkYSIsImMiOjR9'// Actualizado
     },
     operacional: {

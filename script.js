@@ -7,15 +7,15 @@ const dashboardUrls = {
         acuerdos: 'https://app.powerbi.com/view?r=eyJrIjoiZmNhNTNkZjctZThjZC00MWQzLTljMWUtNGY5YWI4Y2YzYmQ0IiwidCI6ImM0MWJjOWY2LTVlNDAtNDA5Yy1iOWNjLWRiNjhmYjVhMzU1NCIsImMiOjR9', // Actualizado
         coordinador: 'https://app.powerbi.com/view?r=eyJrIjoiMWFjYjQxYWMtOWFiZC00Zjg3LTg5ZjMtMjU0ODFiZmM5OWJlIiwidCI6ImM0MWJjOWY2LTVlNDAtNDA5Yy1iOWNjLWRiNjhmYjVhMzU1NCIsImMiOjR9',// Actualizadoo2026
         scrum: 'https://app.powerbi.com/view?r=eyJrIjoiZmI3NGJmYjQtZDc1NC00ZWEwLWEyODctOTI3ZjgwYmM4MWQzIiwidCI6ImM0MWJjOWY2LTVlNDAtNDA5Yy1iOWNjLWRiNjhmYjVhMzU1NCIsImMiOjR9',// Actualizado
-        logros: 'https://app.powerbi.com/view?r=eyJrIjoiNjcwNWZjMDctNTZhMC00YzJjLWE3ODktMTdlY2U1M2NlYzQyIiwidCI6IjJkZDI2MmI5LTc4NDctNGM1NC05NTMwLTk0MThlMGY4MWNkYSIsImMiOjR9'// Actualizado
+        logros: 'https://app.powerbi.com/view?r=eyJrIjoiMjBkNGE3MmQtNGI2OS00Y2Q1LWIyNTctOTA0NzBiMzg2YzgzIiwidCI6ImM0MWJjOWY2LTVlNDAtNDA5Yy1iOWNjLWRiNjhmYjVhMzU1NCIsImMiOjR9'// Actualizado
     },
     operacional: {
         pagos: 'https://app.powerbi.com/view?r=eyJrIjoiNjE3MTIzN2UtZTUwYy00ZjUyLTg5NjQtMmRkZjA4ZmQ4NDY0IiwidCI6ImRlZmJhNDcxLWM4M2YtNGExMC04ZTU5LTcxZjFlMDczNWNhOCJ9',
         presupuesto: 'https://app.powerbi.com/view?r=eyJrIjoiZDRmNjNhODctYTljNS00OWYwLThhYTMtY2E1ZDUzZTYwZTBlIiwidCI6ImRlZmJhNDcxLWM4M2YtNGExMC04ZTU5LTcxZjFlMDczNWNhOCJ9',
         adquisiciones: 'https://app.powerbi.com/view?r=eyJrIjoiMjJiNjMzMGQtYjQ3Zi00YTQyLThmZTUtNGNmZWEwMjgxY2EwIiwidCI6ImRlZmJhNDcxLWM4M2YtNGExMC04ZTU5LTcxZjFlMDczNWNhOCJ9',
-        documentacion: 'https://app.powerbi.com/view?r=eyJrIjoiNDY0ODc1ODAtM2QxYy00ODg1LWI2M2ItZTdiNDg4OTIyYmQzIiwidCI6IjJkZDI2MmI5LTc4NDctNGM1NC05NTMwLTk0MThlMGY4MWNkYSIsImMiOjR9', // Actualizado
+        documentacion: 'https://app.powerbi.com/view?r=eyJrIjoiOTJhNmVmYWMtMTRkZi00YWE2LTliYzAtNmUwODY4YTRlMzcyIiwidCI6ImM0MWJjOWY2LTVlNDAtNDA5Yy1iOWNjLWRiNjhmYjVhMzU1NCIsImMiOjR9', // Actualizado
         evidencia: 'https://app.powerbi.com/view?r=eyJrIjoiZWNiOGIwZTktMDBiYi00OTgyLTk0ZjctNWRlYTJhYzQyYzk1IiwidCI6ImRlZmJhNDcxLWM4M2YtNGExMC04ZTU5LTcxZjFlMDczNWNhOCJ9',
-        permanencia: 'https://app.powerbi.com/view?r=eyJrIjoiOWExZDUzNTctOGVmYi00ZjhjLWFlYTEtZGE2OGFlZGU1NTBkIiwidCI6IjJkZDI2MmI5LTc4NDctNGM1NC05NTMwLTk0MThlMGY4MWNkYSIsImMiOjR9' // Actualizado
+        permanencia: 'https://app.powerbi.com/view?r=eyJrIjoiY2EwN2ZlODQtODIyNC00M2Q5LTlmZjQtOWYyNDMzMDAwY2JhIiwidCI6ImM0MWJjOWY2LTVlNDAtNDA5Yy1iOWNjLWRiNjhmYjVhMzU1NCIsImMiOjR9' // Actualizado
     },
     otros: {
         edades: 'https://app.powerbi.com/view?r=eyJrIjoiNGViN2E3YjMtZWFiMS00YmYyLThiZmQtMGVlYjc3NzdiNTkyIiwidCI6IjJkZDI2MmI5LTc4NDctNGM1NC05NTMwLTk0MThlMGY4MWNkYSIsImMiOjR9',

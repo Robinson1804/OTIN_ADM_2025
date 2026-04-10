@@ -1,7 +1,7 @@
 // Configuración de URLs de los dashboardsa
 const dashboardUrls = {
     gerencial: {
-        poi: 'https://app.powerbi.com/view?r=eyJrIjoiZGUyZjU2YzgtYjM1NS00YTgyLTk3ZGEtN2M5ZTM5MGY2NTg0IiwidCI6ImM0MWJjOWY2LTVlNDAtNDA5Yy1iOWNjLWRiNjhmYjVhMzU1NCIsImMiOjR9',// Actualizado 2026
+        poi: 'https://app.powerbi.com/view?r=eyJrIjoiMzg1MmZlNzMtMGY4Ni00ZDdhLWI0NjctMjE3Y2ZmMmM5OGM3IiwidCI6ImM0MWJjOWY2LTVlNDAtNDA5Yy1iOWNjLWRiNjhmYjVhMzU1NCIsImMiOjR9',// Actualizado 2026
         asistencia: 'https://app.powerbi.com/view?r=eyJrIjoiZDNmZTEwNzktY2NmNC00NDkyLTgyZWItYjQyOWVkYmQ2YWY0IiwidCI6ImM0MWJjOWY2LTVlNDAtNDA5Yy1iOWNjLWRiNjhmYjVhMzU1NCIsImMiOjR9', // Actualizado
         metodologiaabc: 'https://app.powerbi.com/view?r=eyJrIjoiZTg3ZTg3YzYtMGJlZC00NTViLThmMzEtZWFmNjhlMWM4ZTY5IiwidCI6ImM0MWJjOWY2LTVlNDAtNDA5Yy1iOWNjLWRiNjhmYjVhMzU1NCIsImMiOjR9', // Actualizado
         acuerdos: 'https://app.powerbi.com/view?r=eyJrIjoiZmNhNTNkZjctZThjZC00MWQzLTljMWUtNGY5YWI4Y2YzYmQ0IiwidCI6ImM0MWJjOWY2LTVlNDAtNDA5Yy1iOWNjLWRiNjhmYjVhMzU1NCIsImMiOjR9', // Actualizado
